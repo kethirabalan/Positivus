@@ -1,14 +1,10 @@
 import { defineConfig } from 'astro/config';
-
 import tailwind from "@astrojs/tailwind";
+import node from '@astrojs/node';
 
-// Import the Vercel adapter
-import vercel from '@astrojs/vercel';
-
-// https://astro.build/config
 export default defineConfig({
-  site: "https://positivustheme.vercel.app",
+  site: "https://positivustheme.vercel.app", // You can update this if you're moving fully to Firebase
   integrations: [tailwind()],
   output: 'server',
-  adapter: vercel(),
+  adapter: node({ mode: 'middleware' }),  // Use the Node adapter in middleware mode
 });
