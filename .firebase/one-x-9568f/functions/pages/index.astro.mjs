@@ -6,7 +6,7 @@ import { $ as $$Card } from '../chunks/Card_CtkSx0hT.mjs';
 import { b as $$Section, c as $$SectionTitle, $ as $$Sponsors, a as $$Services } from '../chunks/Services_CMwsWNIk.mjs';
 /* empty css                                 */
 import 'clsx';
-import { $ as $$MainLayout } from '../chunks/MainLayout_BLlX_bfj.mjs';
+import { $ as $$MainLayout } from '../chunks/MainLayout_CQKiL_Lh.mjs';
 export { renderers } from '../renderers.mjs';
 
 const larrow = new Proxy({"src":"/_astro/icon3.C2Kx7sAW.svg","width":21,"height":20,"format":"svg"}, {

@@ -7,7 +7,7 @@ import 'es-module-lexer';
 import buffer from 'node:buffer';
 import crypto$1 from 'node:crypto';
 import { Http2ServerResponse } from 'node:http2';
-import { a as appendForwardSlash$1, j as joinPaths, b as removeTrailingForwardSlash, p as prependForwardSlash$1, t as trimSlashes, f as fileExtension, s as slash, c as collapseDuplicateTrailingSlashes, h as hasFileExtension$1 } from './path_Cvt6sEOY.mjs';
+import { a as appendForwardSlash$1, j as joinPaths, b as removeTrailingForwardSlash, p as prependForwardSlash$1, t as trimSlashes, f as fileExtension, s as slash, c as collapseDuplicateTrailingSlashes, h as hasFileExtension } from './path_Cvt6sEOY.mjs';
 import { unflatten as unflatten$1, stringify as stringify$1 } from 'devalue';
 import { createStorage, builtinDrivers } from 'unstorage';
 import { AsyncLocalStorage } from 'node:async_hooks';
@@ -3035,7 +3035,7 @@ class App {
     if (trailingSlash === "ignore") {
       return pathname;
     }
-    if (trailingSlash === "always" && !hasFileExtension$1(pathname)) {
+    if (trailingSlash === "always" && !hasFileExtension(pathname)) {
       return appendForwardSlash$1(pathname);
     }
     if (trailingSlash === "never") {
@@ -3554,11 +3554,6 @@ function getNetworkAddress(protocol = "http", hostname, port, base) {
     }
   });
   return NetworkAddress;
-}
-
-const WITH_FILE_EXT = /\/[^/]+\.\w+$/;
-function hasFileExtension(path) {
-  return WITH_FILE_EXT.test(path);
 }
 
 function createStaticHandler(app, options) {

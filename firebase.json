@@ -1,22 +1,16 @@
 {
   "hosting": {
-    "public": "dist/client",          
+    "source": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "ssr"                 
-      }
     ],
     "frameworksBackend": {
       "region": "us-central1"
     }
   },
   "functions": {
-    "source": ".astro/server/"         
+    "source": ".astro/server/"
   }
 }
